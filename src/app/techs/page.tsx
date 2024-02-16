@@ -1,10 +1,17 @@
 import Navbar from "@/components/Navbar";
 import AppTechs from "@/components/Techs/AppTechs";
 import BackEndTechs from "@/components/Techs/BackEndTechs";
+import DatabaseTechs from "@/components/Techs/DatabaseTechs";
 import FrontEndTechs from "@/components/Techs/FrontEndTechs";
 import VersionControlTechs from "@/components/Techs/VersionControlTechs";
 
 export default function Techs() {
+    function Title({ title }: { title: string }) {
+        return (
+            <strong className="text-xl">{title}</strong>
+        )
+    }
+
     return (
         <div>
             <Navbar page="techs" />
@@ -16,26 +23,27 @@ export default function Techs() {
                 </div>
 
                 <div>
-                    <strong>Front-end</strong>
-
+                    <Title title="Front-end" />
                     <FrontEndTechs />
                 </div>
 
                 <div>
-                    <strong>Back-end</strong>
-
+                    <Title title="Back-end" />
                     <BackEndTechs />
                 </div>
 
                 <div>
-                    <strong>Version Control</strong>
+                    <Title title="Database" />
+                    <DatabaseTechs />
+                </div>
 
+                <div>
+                    <Title title="Version Control" />
                     <VersionControlTechs />
                 </div>
 
                 <div>
-                    <strong>Apps</strong>
-
+                    <Title title="Apps" />
                     <AppTechs />
                 </div>
             </main>

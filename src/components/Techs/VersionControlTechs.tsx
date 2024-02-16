@@ -1,6 +1,6 @@
-import { Tech } from "."
-import TechImage from "./TechImage"
-import TechName from "./TechName"
+import { Tech } from "./Tech"
+import TechImage from "./Tech/TechImage"
+import TechName from "./Tech/TechName"
 
 export default function VersionControlTechs() {
     const versionControlsArray = ["git", "github"]
@@ -29,7 +29,7 @@ export default function VersionControlTechs() {
     })
 
     return (
-        <div className="flex flex-wrap gap-4 mt-5">
+        <div className="flex flex-wrap gap-4 mt-5 max-[765px]:justify-center">
             {versionControlsElement}
         </div>
     )

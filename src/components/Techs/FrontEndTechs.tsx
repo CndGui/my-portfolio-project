@@ -1,4 +1,4 @@
-import { Tech } from "."
+import { Tech } from "./Tech"
 
 export default function FrontEndTechs() {
     const techArray = ["html", "css", "javascript", "typescript", "react", "tailwind", "nextjs", "react-router", "recoil"]
@@ -64,7 +64,7 @@ export default function FrontEndTechs() {
     })
 
     return (
-        <div className="flex flex-wrap gap-4 mt-5">
+        <div className="flex flex-wrap gap-4 mt-5 max-[765px]:justify-center">
             {Techs}
         </div>
     )

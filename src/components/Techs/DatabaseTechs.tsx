@@ -2,19 +2,22 @@ import { Tech } from "./Tech"
 import TechImage from "./Tech/TechImage"
 import TechName from "./Tech/TechName"
 
-export default function AppTechs() {
-    const appsArray = ["chrome", "vsc", "terminal", "spotify", "discord"]
-    const appsElement = appsArray.map(i => {
+export default function DatabaseTechs() {
+    const databasesArray = ["mongodb"]
+    const databasesElement = databasesArray.map(i => {
         let name = i
+        let destiny;
 
         switch (i) {
-            case "vsc": {
-                name = "visual Studio Code"
+            case "mongodb": {
+                destiny = "https://www.mongodb.com/pt-br"
+                name = "mongoDB"
+                break
             }
         }
 
         return (
-            <Tech.Root key={i} >
+            <Tech.Root key={i} destiny={destiny} >
                 <TechImage imageName={i} />
                 <TechName name={name} className="first-letter:uppercase" />
             </Tech.Root>
@@ -23,7 +26,7 @@ export default function AppTechs() {
 
     return (
         <div className="flex flex-wrap gap-4 mt-5 max-[765px]:justify-center">
-            {appsElement}
+            {databasesElement}
         </div>
     )
 }
