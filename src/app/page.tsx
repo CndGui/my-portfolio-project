@@ -31,7 +31,7 @@ export default function Home() {
 
           <div className="flex flex-col">
             <p className="text-4xl font-semibold">Guilherme Rodrigues</p>
-            <p className="text-lg text-zinc-400 -mt-1">Front-end developer</p>
+            <p className="text-lg text-zinc-600 dark:text-zinc-400 -mt-1">Front-end developer</p>
 
             <Info className="mt-2" />
           </div>
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
 
           <div className="h-60 flex items-center justify-center">
-            <p className="text-zinc-400">Nothing ;/</p>
+            <p className="text-zinc-600 dark:text-zinc-400">Nothing ;/</p>
           </div>
 
           {/* <div className="relative h-60 grid grid-cols-4 gap-6 overflow-y-scroll scrollbar-thin scrollbar-thumb-cyan-500/25 scrollbar-track-white/10 px-1">

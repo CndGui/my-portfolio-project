@@ -19,7 +19,7 @@ export default function Techs() {
             <main className="ml-60 max-[765px]:ml-0 max-[765px]:mt-14 py-20 px-36 max-[1220px]:px-20 max-[917px]:px-10 max-[480px]:px-4 flex flex-col gap-10">
                 <div>
                     <strong className="text-3xl">Tool and technologies</strong>
-                    <p className="text-zinc-400">Explore some of the technologies I use in my projects. Each one has its function within a project, so if you feel curious, click on one to go to its website.</p>
+                    <p className="text-zinc-600 dark:text-zinc-400">Explore some of the technologies I use in my projects. Each one has its function within a project, so if you feel curious, click on one to go to its website.</p>
                 </div>
 
                 <div>
