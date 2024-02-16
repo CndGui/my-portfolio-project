@@ -16,7 +16,7 @@ export default function Navbar({ page }: NavbarProps) {
             <aside className="fixed top-0 left-0 max-[765px]:hidden border-r border-black/20 dark:border-white/20 h-screen w-60 p-2">
                 <div className="flex items-center mb-5 gap-2">
                     <div className="relative bg-cyan-500 rounded-md size-10 overflow-hidden border border-cyan-500">
-                        <img src="/images/perfil-2.png" alt="Perfil" className="absolute -top-1" />
+                        <img src="/images/perfil.png" alt="Perfil" />
                     </div>
                     <div className="flex flex-col">
                         <p>Guilherme Rodrigues</p>
@@ -83,7 +83,7 @@ export default function Navbar({ page }: NavbarProps) {
                 <div className="flex items-center gap-2">
                     <div className="p-[0.05rem] bg-cyan-500 rounded-md">
                         <div className="relative bg-cyan-500 rounded-md size-10 overflow-hidden">
-                            <img src="/images/perfil-2.png" alt="Perfil" className="absolute -top-1" />
+                            <img src="/images/perfil.png" alt="Perfil" />
                         </div>
                     </div>
                     <div className="flex flex-col">
