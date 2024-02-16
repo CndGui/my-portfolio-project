@@ -1,5 +1,6 @@
 'use client'
 
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState } from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -16,16 +17,13 @@ export default function Navbar({ page }: NavbarProps) {
         setConfigNav(!configNav)
     }
 
+    const { theme, setTheme } = useTheme()
     function ToggleThemeLight() {
-        const doc = document.documentElement
-        doc.classList.remove("dark")
-        ToggleConfigNav()
+        setTheme("light")
     }
 
     function ToggleThemeDark() {
-        const doc = document.documentElement
-        doc.classList.add("dark")
-        ToggleConfigNav()
+        setTheme("dark")
     }
 
     function NavbarOpen() {
@@ -97,8 +95,9 @@ export default function Navbar({ page }: NavbarProps) {
                             <div>
                                 <p className="text-xs">Theme</p>
                                 <div className="flex flex-col mt-1 items-center">
-                                    <span onClick={ToggleThemeLight} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Light</span>
-                                    <span onClick={ToggleThemeDark} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Dark</span>
+                                    <span onClick={() => {setTheme("light")}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Light</span>
+                                    <span onClick={() => {setTheme("dark")}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Dark</span>
+                                    <span onClick={() => {setTheme("system")}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">System</span>
                                 </div>
                             </div>
                         </div>
@@ -140,8 +139,9 @@ export default function Navbar({ page }: NavbarProps) {
                             <div>
                                 <p className="text-xs">Theme</p>
                                 <div className="flex flex-col gap-2 mt-1 items-center">
-                                    <span onClick={ToggleThemeLight} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Light</span>
-                                    <span onClick={ToggleThemeDark} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Dark</span>
+                                    <span onClick={() => {setTheme("light")}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Light</span>
+                                    <span onClick={() => {setTheme("dark")}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Dark</span>
+                                    <span onClick={() => {setTheme("system")}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">System</span>
                                 </div>
                             </div>
                         </div>
