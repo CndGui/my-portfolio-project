@@ -12,18 +12,10 @@ interface NavbarProps {
 }
 
 export default function Navbar({ page }: NavbarProps) {
+    const { theme, setTheme } = useTheme()
     const [configNav, setConfigNav] = useState(false)
     function ToggleConfigNav() {
         setConfigNav(!configNav)
-    }
-
-    const { theme, setTheme } = useTheme()
-    function ToggleThemeLight() {
-        setTheme("light")
-    }
-
-    function ToggleThemeDark() {
-        setTheme("dark")
     }
 
     function NavbarOpen() {
@@ -95,9 +87,9 @@ export default function Navbar({ page }: NavbarProps) {
                             <div>
                                 <p className="text-xs">Theme</p>
                                 <div className="flex flex-col mt-1 items-center">
-                                    <span onClick={() => {setTheme("light")}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Light</span>
-                                    <span onClick={() => {setTheme("dark")}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Dark</span>
-                                    <span onClick={() => {setTheme("system")}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">System</span>
+                                    <span onClick={() => {setTheme("light"); ToggleConfigNav()}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Light</span>
+                                    <span onClick={() => {setTheme("dark"); ToggleConfigNav()}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Dark</span>
+                                    <span onClick={() => {setTheme("system"); ToggleConfigNav()}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">System</span>
                                 </div>
                             </div>
                         </div>
@@ -139,9 +131,9 @@ export default function Navbar({ page }: NavbarProps) {
                             <div>
                                 <p className="text-xs">Theme</p>
                                 <div className="flex flex-col gap-2 mt-1 items-center">
-                                    <span onClick={() => {setTheme("light")}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Light</span>
-                                    <span onClick={() => {setTheme("dark")}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Dark</span>
-                                    <span onClick={() => {setTheme("system")}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">System</span>
+                                    <span onClick={() => {setTheme("light"); ToggleConfigNav()}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Light</span>
+                                    <span onClick={() => {setTheme("dark"); ToggleConfigNav()}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">Dark</span>
+                                    <span onClick={() => {setTheme("system"); ToggleConfigNav()}} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">System</span>
                                 </div>
                             </div>
                         </div>
