@@ -1,4 +1,6 @@
 import Navbar from "@/components/Navbar";
+import { Skill } from "@/components/Skill";
+import FrontEndSkills from "@/components/Skill/FrontEndSkills";
 
 export default function Skills() {
     return (
@@ -14,56 +16,7 @@ export default function Skills() {
                 <div>
                     <strong>Front-end</strong>
 
-                    <div className="flex flex-wrap gap-4 mt-5">
-                        <a href="/" className="p-2 cursor-pointer min-w-52 bg-cyan-500/5 hover:bg-cyan-500/25 rounded-md flex gap-2 items-center">
-                            <div className="p-2 bg-white/5 rounded-md">
-                                <img src="/images/logos/html-logo.png" alt="html" className="size-8" />
-                            </div>
-                            <span>Html</span>
-                        </a>
-                        <a href="/" className="p-2 cursor-pointer min-w-52 bg-cyan-500/5 hover:bg-cyan-500/25 rounded-md flex gap-2 items-center">
-                            <div className="p-2 bg-white/5 rounded-md">
-                                <img src="/images/logos/css-logo.png" alt="css" className="size-8" />
-                            </div>
-                            <span>Css</span>
-                        </a>
-                        <a href="/" className="p-2 cursor-pointer min-w-52 bg-cyan-500/5 hover:bg-cyan-500/25 rounded-md flex gap-2 items-center">
-                            <div className="p-2 bg-white/5 rounded-md">
-                                <img src="/images/logos/javascript-logo.png" alt="javascript" className="size-8 rounded" />
-                            </div>
-                            <span>Javascript</span>
-                        </a>
-                        <a href="/" className="p-2 cursor-pointer min-w-52 bg-cyan-500/5 hover:bg-cyan-500/25 rounded-md flex gap-2 items-center">
-                            <div className="p-2 bg-white/5 rounded-md">
-                                <img src="/images/logos/typescript-logo.png" alt="typescript" className="size-8" />
-                            </div>
-                            <span>Typescript</span>
-                        </a>
-                        <a href="/" className="p-2 cursor-pointer min-w-52 bg-cyan-500/5 hover:bg-cyan-500/25 rounded-md flex gap-2 items-center">
-                            <div className="p-2 bg-white/5 rounded-md">
-                                <img src="/images/logos/react-logo.png" alt="react" className="size-8" />
-                            </div>
-                            <span>React</span>
-                        </a>
-                        <a href="/" className="p-2 cursor-pointer min-w-52 bg-cyan-500/5 hover:bg-cyan-500/25 rounded-md flex gap-2 items-center">
-                            <div className="p-2 bg-white/5 rounded-md">
-                                <img src="/images/logos/tailwind-logo.png" alt="tailwind" className="size-8" />
-                            </div>
-                            <span>TailwindCSS</span>
-                        </a>
-                        <a href="/" className="p-2 cursor-pointer min-w-52 bg-cyan-500/5 hover:bg-cyan-500/25 rounded-md flex gap-2 items-center">
-                            <div className="p-2 bg-white/5 rounded-md">
-                                <img src="/images/logos/react-router-logo.png" alt="react-router" className="size-8" />
-                            </div>
-                            <span>React Router</span>
-                        </a>
-                        <a href="/" className="p-2 cursor-pointer min-w-52 bg-cyan-500/5 hover:bg-cyan-500/25 rounded-md flex gap-2 items-center">
-                            <div className="p-2 bg-white/5 rounded-md">
-                                <img src="/images/logos/recoil-logo.png" alt="recoil" className="size-8" />
-                            </div>
-                            <span>Recoil</span>
-                        </a>
-                    </div>
+                    <FrontEndSkills />
                 </div>
             </main>
         </div>
