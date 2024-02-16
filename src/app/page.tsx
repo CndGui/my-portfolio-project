@@ -25,10 +25,8 @@ export default function Home() {
 
       <main className="ml-60 max-[765px]:ml-0 max-[765px]:mt-14 py-20 px-36 max-[1220px]:px-20 max-[917px]:px-10 max-[480px]:px-4 flex flex-col gap-10">
         <div className="flex gap-3 items-center">
-          <div className="p-[0.1rem] bg-cyan-500 rounded-md">
-            <div className="bg-cyan-500 rounded-md size-32 flex items-center justify-center overflow-hidden">
-              <img src="/images/perfil-2.png" alt="Perfil" className="" />
-            </div>
+          <div className="bg-cyan-500 rounded-md size-32 flex items-center justify-center overflow-hidden border border-cyan-500">
+            <img src="/images/perfil-2.png" alt="Perfil" className="" />
           </div>
 
           <div className="flex flex-col">

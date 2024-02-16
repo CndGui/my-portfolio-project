@@ -1,19 +1,9 @@
-import { Skill } from "."
+import { Tech } from "."
 
-export default function FrontEndSkills() {
-    const skillsArray = ["html", "css", "javascript", "typescript", "react", "tailwind", "react-router", "recoil"]
-    const Skills = skillsArray.map(i => {
+export default function FrontEndTechs() {
+    const techArray = ["html", "css", "javascript", "typescript", "react", "tailwind", "nextjs", "react-router", "recoil"]
+    const Techs = techArray.map(i => {
         let name = i
-        switch (i) {
-            case "tailwind": {
-                name = "tailwindCSS"
-                break
-            }
-            case "react-router": {
-                name = "react Router"
-            }
-        }
-
         let destiny;
         switch (i) {
             case "html": {
@@ -43,11 +33,19 @@ export default function FrontEndSkills() {
 
             case "tailwind": {
                 destiny = "https://tailwindcss.com/"
+                name = "tailwindCSS"
+                break
+            }
+
+            case "nextjs": {
+                destiny = "https://nextjs.org/"
+                name = "nextJS"
                 break
             }
             
             case "react-router": {
                 destiny = "https://reactrouter.com/en/main"
+                name = "react Router"
                 break
             }
             
@@ -58,16 +56,16 @@ export default function FrontEndSkills() {
         }
 
         return (
-            <Skill.Root key={i} destiny={destiny}>
-                <Skill.Image imageName={i} />
-                <Skill.Name name={name} className={name == "html" || i == "css" ? "uppercase" : "first-letter:uppercase"} />
-            </Skill.Root>
+            <Tech.Root key={i} destiny={destiny}>
+                <Tech.Image imageName={i} />
+                <Tech.Name name={name} className={name == "html" || i == "css" ? "uppercase" : "first-letter:uppercase"} />
+            </Tech.Root>
         )
     })
 
     return (
         <div className="flex flex-wrap gap-4 mt-5">
-            {Skills}
+            {Techs}
         </div>
     )
 }

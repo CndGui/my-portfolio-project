@@ -7,7 +7,7 @@ import { LuAlignJustify } from "react-icons/lu";
 import { PiHouse, PiUser, PiDevices, PiCode, PiArrowUpRight } from "react-icons/pi";
 
 interface NavbarProps {
-    page: string
+    page: "home" | "projects" | "techs"
 }
 
 export default function Navbar({ page }: NavbarProps) {
@@ -15,10 +15,8 @@ export default function Navbar({ page }: NavbarProps) {
         return (
             <aside className="fixed top-0 left-0 max-[765px]:hidden border-r border-black/20 dark:border-white/20 h-screen w-60 p-2">
                 <div className="flex items-center mb-5 gap-2">
-                    <div className="p-[0.05rem] bg-cyan-500 rounded-md">
-                        <div className="relative bg-cyan-500 rounded-md size-10 overflow-hidden">
-                            <img src="/images/perfil-2.png" alt="Perfil" className="absolute -top-1" />
-                        </div>
+                    <div className="relative bg-cyan-500 rounded-md size-10 overflow-hidden border border-cyan-500">
+                        <img src="/images/perfil-2.png" alt="Perfil" className="absolute -top-1" />
                     </div>
                     <div className="flex flex-col">
                         <p>Guilherme Rodrigues</p>
@@ -40,9 +38,9 @@ export default function Navbar({ page }: NavbarProps) {
                             <p className="text-sm">Projects</p>
                         </Link>
 
-                        <Link data-page={page} href={"skills"} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=skills]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=skills]:bg-white/10 data-[page=skills]:text-cyan-500 items-center">
+                        <Link data-page={page} href={"techs"} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=techs]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=techs]:bg-white/10 data-[page=techs]:text-cyan-500 items-center">
                             <PiCode size={20} />
-                            <p className="text-sm">Skills</p>
+                            <p className="text-sm">Tools and technologies</p>
                         </Link>
                     </nav>
                 </div>
@@ -57,13 +55,13 @@ export default function Navbar({ page }: NavbarProps) {
                             <PiArrowUpRight className="ml-auto text-cyan-500" size={12} />
                         </Link>
 
-                        <Link href={"/"} className="flex gap-2 p-2 rounded-md hover:bg-black/10 dark:hover:bg-white/10">
+                        <Link href={"https://www.linkedin.com/in/cndgui/"} target="_blank" className="flex gap-2 p-2 rounded-md hover:bg-black/10 dark:hover:bg-white/10">
                             <FaLinkedin size={20} />
                             <p className="text-sm">Linkedin</p>
                             <PiArrowUpRight className="ml-auto text-cyan-500" size={12} />
                         </Link>
 
-                        <Link href={"/"} className="flex gap-2 p-2 rounded-md hover:bg-black/10 dark:hover:bg-white/10">
+                        <Link href={"https://twitter.com/CndGui"} target="_blank" className="flex gap-2 p-2 rounded-md hover:bg-black/10 dark:hover:bg-white/10">
                             <FaTwitter size={20} />
                             <p className="text-sm">Twitter/X</p>
                             <PiArrowUpRight className="ml-auto text-cyan-500" size={12} />
@@ -112,9 +110,9 @@ export default function Navbar({ page }: NavbarProps) {
                                     <p className="text-sm">Projects</p>
                                 </Link>
 
-                                <Link data-page={page} href={"skills"} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=skills]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=skills]:bg-white/10 data-[page=skills]:text-cyan-500 items-center">
+                                <Link data-page={page} href={"techs"} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=techs]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=techs]:bg-white/10 data-[page=techs]:text-cyan-500 items-center">
                                     <PiCode size={20} />
-                                    <p className="text-sm">Skills</p>
+                                    <p className="text-sm">Tools and technologies</p>
                                 </Link>
                             </nav>
                         </div>
@@ -129,13 +127,13 @@ export default function Navbar({ page }: NavbarProps) {
                                     <PiArrowUpRight className="ml-auto text-cyan-500" size={12} />
                                 </Link>
 
-                                <Link href={"/"} className="flex gap-2 p-2 rounded-md hover:bg-black/10 dark:hover:bg-white/10">
+                                <Link href={"https://www.linkedin.com/in/cndgui/"} target="_blank" className="flex gap-2 p-2 rounded-md hover:bg-black/10 dark:hover:bg-white/10">
                                     <FaLinkedin size={20} />
                                     <p className="text-sm">Linkedin</p>
                                     <PiArrowUpRight className="ml-auto text-cyan-500" size={12} />
                                 </Link>
 
-                                <Link href={"/"} className="flex gap-2 p-2 rounded-md hover:bg-black/10 dark:hover:bg-white/10">
+                                <Link href={"https://twitter.com/CndGui"} target="_blank" className="flex gap-2 p-2 rounded-md hover:bg-black/10 dark:hover:bg-white/10">
                                     <FaTwitter size={20} />
                                     <p className="text-sm">Twitter/X</p>
                                     <PiArrowUpRight className="ml-auto text-cyan-500" size={12} />
