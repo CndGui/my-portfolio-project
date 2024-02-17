@@ -1,11 +1,16 @@
+'use client'
+
 import Navbar from "@/components/Navbar";
 import AppTechs from "@/components/Techs/AppTechs";
 import BackEndTechs from "@/components/Techs/BackEndTechs";
 import DatabaseTechs from "@/components/Techs/DatabaseTechs";
 import FrontEndTechs from "@/components/Techs/FrontEndTechs";
 import VersionControlTechs from "@/components/Techs/VersionControlTechs";
+import { useTranslation } from "react-i18next";
 
 export default function Techs() {
+    const { t } = useTranslation()
+
     function Title({ title }: { title: string }) {
         return (
             <strong className="text-xl">{title}</strong>
@@ -18,8 +23,8 @@ export default function Techs() {
 
             <main className="ml-60 max-[765px]:ml-0 max-[765px]:mt-14 py-20 px-36 max-[1220px]:px-20 max-[917px]:px-10 max-[480px]:px-4 flex flex-col gap-10">
                 <div>
-                    <strong className="text-3xl">Tool and technologies</strong>
-                    <p className="text-zinc-600 dark:text-zinc-400">Explore some of the technologies I use in my projects. Each one has its function within a project, so if you feel curious, click on one to go to its website.</p>
+                    <strong className="text-3xl">{t("pages.techs.title")}</strong>
+                    <p className="text-zinc-600 dark:text-zinc-400">{t("pages.techs.sub-text")}</p>
                 </div>
 
                 <div>
@@ -33,12 +38,12 @@ export default function Techs() {
                 </div>
 
                 <div>
-                    <Title title="Database" />
+                    <Title title={t("pages.techs.sections-cut.database")} />
                     <DatabaseTechs />
                 </div>
 
                 <div>
-                    <Title title="Version Control" />
+                    <Title title={t("pages.techs.sections-cut.version-control")} />
                     <VersionControlTechs />
                 </div>
 
