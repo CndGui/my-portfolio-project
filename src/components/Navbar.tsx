@@ -22,7 +22,7 @@ export default function Navbar({ page }: NavbarProps) {
         setConfigNav(!configNav)
     }
 
-    function ChangeLanguage( language : "pt" | "en" ) {
+    function ChangeLanguage(language: "pt" | "en") {
         localStorage.setItem('language', language);
         i18next.changeLanguage(language);
     }
@@ -30,7 +30,7 @@ export default function Navbar({ page }: NavbarProps) {
     function NavbarOpen() {
 
         return (
-            <aside className="fixed top-0 left-0 max-[765px]:hidden border-r border-black/20 dark:border-white/20 h-screen w-60 p-2 flex flex-col">
+            <aside className="fixed top-0 left-0 max-[765px]:hidden border-r border-black/20 dark:border-white/20 h-screen w-60 p-2 flex flex-col overflow-y-scroll scrollbar-none">
                 <div className="flex items-center mb-5 gap-2">
                     <div className="relative bg-cyan-500 rounded-md size-10 overflow-hidden border border-cyan-500">
                         <img src="/images/perfil.png" alt="Perfil" />
@@ -41,7 +41,7 @@ export default function Navbar({ page }: NavbarProps) {
                     </div>
                 </div>
 
-                <Link data-page={page} href={"/"} onClick={() => {document.title = `Guilherme - ${t("pages.home.sub-text")}`}} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=home]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=home]:bg-white/10 data-[page=home]:text-cyan-500 items-center">
+                <Link data-page={page} href={"/"} onClick={() => { document.title = `Guilherme - ${t("pages.home.sub-text")}` }} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=home]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=home]:bg-white/10 data-[page=home]:text-cyan-500 items-center">
                     <PiHouse size={20} />
                     <p className="text-sm">{t("navbar.categorys.home")}</p>
                 </Link>
@@ -50,19 +50,19 @@ export default function Navbar({ page }: NavbarProps) {
                     <p className="m-2 text-xs text-zinc-600 dark:text-zinc-400">{t("navbar.categorys-cut.me")}</p>
 
                     <nav className="flex flex-col gap-2">
-                        <Link data-page={page} href={"projects"} onClick={() => {document.title = `Guilherme - ${t("pages.projects.title")}`}} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=projects]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=projects]:bg-white/10 data-[page=projects]:text-cyan-500 items-center">
+                        <Link data-page={page} href={"projects"} onClick={() => { document.title = `Guilherme - ${t("pages.projects.title")}` }} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=projects]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=projects]:bg-white/10 data-[page=projects]:text-cyan-500 items-center">
                             <PiDevices size={20} />
                             <p className="text-sm">{t("navbar.categorys.projects")}</p>
                         </Link>
 
-                        <Link data-page={page} href={"techs"} onClick={() => {document.title = `Guilherme - ${t("pages.techs.title")}`}} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=techs]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=techs]:bg-white/10 data-[page=techs]:text-cyan-500 items-center">
+                        <Link data-page={page} href={"techs"} onClick={() => { document.title = `Guilherme - ${t("pages.techs.title")}` }} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=techs]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=techs]:bg-white/10 data-[page=techs]:text-cyan-500 items-center">
                             <PiCode size={20} />
                             <p className="text-sm">{t("navbar.categorys.techs")}</p>
                         </Link>
                     </nav>
                 </div>
 
-                <div className="mt-6">
+                <div className="mt-6 mb-10">
                     <p className="m-2 text-xs text-zinc-600 dark:text-zinc-400">{t("navbar.categorys-cut.socials")}</p>
 
                     <nav className="flex flex-col gap-2">
@@ -86,7 +86,7 @@ export default function Navbar({ page }: NavbarProps) {
                     </nav>
                 </div>
 
-                <button onClick={ToggleConfigNav} className="border border-black/20 dark:border-white/20 rounded-md w-min mt-auto ml-auto">
+                <button onClick={ToggleConfigNav} className="fixed bottom-2 left-[12rem] border border-black/20 dark:border-white/20 rounded-md w-min bg-white dark:bg-[#000b0d] ml-auto">
                     <PiGear size={35} className="p-1" />
                 </button>
                 {configNav &&
@@ -166,7 +166,7 @@ export default function Navbar({ page }: NavbarProps) {
                 }
                 {shortNav &&
                     <div className="mt-3">
-                        <Link data-page={page} href={"/"} onClick={() => {document.title = `Guilherme - ${t("pages.home.sub-text")}`}} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=home]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=home]:bg-white/10 data-[page=home]:text-cyan-500 items-center">
+                        <Link data-page={page} href={"/"} onClick={() => { document.title = `Guilherme - ${t("pages.home.sub-text")}` }} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=home]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=home]:bg-white/10 data-[page=home]:text-cyan-500 items-center">
                             <PiHouse size={20} />
                             <p className="text-sm">{t("navbar.categorys.home")}</p>
                         </Link>
@@ -175,12 +175,12 @@ export default function Navbar({ page }: NavbarProps) {
                             <p className="m-2 text-xs text-zinc-600 dark:text-zinc-400">{t("navbar.categorys-cut.me")}</p>
 
                             <nav className="flex flex-col gap-2">
-                                <Link data-page={page} href={"projects"} onClick={() => {document.title = `Guilherme - ${t("pages.projects.title")}`}} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=projects]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=projects]:bg-white/10 data-[page=projects]:text-cyan-500 items-center">
+                                <Link data-page={page} href={"projects"} onClick={() => { document.title = `Guilherme - ${t("pages.projects.title")}` }} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=projects]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=projects]:bg-white/10 data-[page=projects]:text-cyan-500 items-center">
                                     <PiDevices size={20} />
                                     <p className="text-sm">{t("navbar.categorys.projects")}</p>
                                 </Link>
 
-                                <Link data-page={page} href={"techs"} onClick={() => {document.title = `Guilherme - ${t("pages.techs.title")}`}} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=techs]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=techs]:bg-white/10 data-[page=techs]:text-cyan-500 items-center">
+                                <Link data-page={page} href={"techs"} onClick={() => { document.title = `Guilherme - ${t("pages.techs.title")}` }} className="flex gap-2 p-2 rounded-md hover:bg-black/10 data-[page=techs]:bg-black/10 dark:hover:bg-white/10 dark:data-[page=techs]:bg-white/10 data-[page=techs]:text-cyan-500 items-center">
                                     <PiCode size={20} />
                                     <p className="text-sm">{t("navbar.categorys.techs")}</p>
                                 </Link>

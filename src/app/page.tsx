@@ -31,7 +31,7 @@ export default function Home() {
       <main className="ml-60 max-[765px]:ml-0 max-[765px]:mt-14 py-20 px-36 max-[1220px]:px-20 max-[917px]:px-10 max-[480px]:px-4 flex flex-col gap-10">
         <div className="flex gap-3 items-center">
           <div className="border border-cyan-500 rounded-md">
-            <img src="/images/perfil.png" alt="Perfil" className="size-32 rounded-md" />
+            <img src="/images/perfil.png" alt="Perfil" className="h-32 min-w-32 rounded-md" />
           </div>
 
           <div className="flex flex-col">
