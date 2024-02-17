@@ -22,6 +22,11 @@ export default function Navbar({ page }: NavbarProps) {
         setConfigNav(!configNav)
     }
 
+    function ChangeLanguage( language : "pt" | "en" ) {
+        localStorage.setItem('selectedLanguage', language);
+        i18next.changeLanguage(language);
+    }
+
     function NavbarOpen() {
 
         return (
@@ -100,8 +105,8 @@ export default function Navbar({ page }: NavbarProps) {
                             <div className="mt-5">
                                 <p className="text-xs">{t("navbar.configuration.options-cut.language")}</p>
                                 <div className="flex flex-col mt-1 items-center">
-                                    <span onClick={() => { i18next.changeLanguage("pt"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.portuguese")}</span>
-                                    <span onClick={() => { i18next.changeLanguage("en"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.english")}</span>
+                                    <span onClick={() => { ChangeLanguage("pt"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.portuguese")}</span>
+                                    <span onClick={() => { ChangeLanguage("en"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.english")}</span>
                                 </div>
                             </div>
                         </div>
@@ -151,9 +156,9 @@ export default function Navbar({ page }: NavbarProps) {
 
                             <div className="mt-5">
                                 <p className="text-xs">{t("navbar.configuration.options-cut.language")}</p>
-                                <div className="flex flex-col mt-1 items-center">
-                                    <span onClick={() => { i18next.changeLanguage("pt"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.portuguese")}</span>
-                                    <span onClick={() => { i18next.changeLanguage("en"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.english")}</span>
+                                <div className="flex flex-col gap-2 mt-1 items-center">
+                                    <span onClick={() => { ChangeLanguage("pt"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.portuguese")}</span>
+                                    <span onClick={() => { ChangeLanguage("en"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.english")}</span>
                                 </div>
                             </div>
                         </div>
