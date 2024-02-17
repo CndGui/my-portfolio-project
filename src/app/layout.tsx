@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "./themeProvider";
+import { LayoutProvider } from "./layoutProvider";
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  icons: "/images/perfil.png",
+  title: "",
   description: "",
 };
 
@@ -11,14 +12,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body className="font-poppins dark:bg-[#000b0d] dark:text-white">
-        <ThemeProvider
+        <LayoutProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
           {children}
-        </ThemeProvider>
+        </LayoutProvider>
       </body>
     </html>
   );
