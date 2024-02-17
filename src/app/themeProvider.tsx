@@ -9,7 +9,7 @@ import { useEffect } from "react"
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   useEffect(() => {
-    const storedLanguage = localStorage.getItem('selectedLanguage');
+    const storedLanguage = localStorage.getItem('language');
     if (storedLanguage) {
       i18next.changeLanguage(storedLanguage);
     }

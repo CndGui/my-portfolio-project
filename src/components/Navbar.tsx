@@ -23,7 +23,7 @@ export default function Navbar({ page }: NavbarProps) {
     }
 
     function ChangeLanguage( language : "pt" | "en" ) {
-        localStorage.setItem('selectedLanguage', language);
+        localStorage.setItem('language', language);
         i18next.changeLanguage(language);
     }
 
