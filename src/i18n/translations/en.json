@@ -50,7 +50,7 @@
                 "title": "My projects",
                 "sub-text": "Here are some of the projects I ve created. If interested, see more at ",
 
-                "projects-1": "My first project, which wasn't done by following a tutorial or copying from somewhere else. Here was when I truly felt that I was learning.",
+                "project-1": "My first project, which wasn't done by following a tutorial or copying from somewhere else. Here was when I truly felt that I was learning.",
                 "project-2": "A small project where I recreated the famous snake game, where the objective is to move your snake to collect points and make it grow.",
 
                 "button-visit": "Visit",
