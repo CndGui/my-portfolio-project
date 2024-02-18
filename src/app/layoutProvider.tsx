@@ -11,9 +11,18 @@ import { useTranslation } from "react-i18next"
 export function LayoutProvider({ children, ...props }: ThemeProviderProps) {
   const { t } = useTranslation()
   useEffect(() => {
+    const userLanguage = window.navigator.language
+    let language = userLanguage.split('-')[0]
+
     const storedLanguage = localStorage.getItem('language');
     if (storedLanguage) {
       i18next.changeLanguage(storedLanguage);
+    } else {
+        if (language == "pt") {
+          i18next.changeLanguage("pt")
+        }else {
+          i18next.changeLanguage("en")
+        }
     }
 
     document.title = `Guilherme - ${t("pages.home.sub-text")}`

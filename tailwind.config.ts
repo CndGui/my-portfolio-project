@@ -11,6 +11,10 @@ const config: Config = {
     extend: {
       fontFamily: {
         'poppins': 'Poppins, sans-serif'
+      },
+      colors: {
+        'darkPage': '#000b0d',
+        'lightPage': '#ffffff'
       }
     },
   },

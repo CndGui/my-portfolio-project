@@ -1,15 +1,20 @@
 'use client'
 
-import Navbar from "@/components/Navbar";
-import AppTechs from "@/components/Techs/AppTechs";
-import BackEndTechs from "@/components/Techs/BackEndTechs";
-import DatabaseTechs from "@/components/Techs/DatabaseTechs";
-import FrontEndTechs from "@/components/Techs/FrontEndTechs";
-import VersionControlTechs from "@/components/Techs/VersionControlTechs";
+import { Navbar } from "@/components/Navbar";
+import { AppTechs } from "./components/Techs/AppTechs";
+import { BackEndTechs } from "./components/Techs/BackEndTechs";
+import { DatabaseTechs } from "./components/Techs/DatabaseTechs";
+import { FrontEndTechs } from "./components/Techs/FrontEndTechs";
+import { VersionControlTechs } from "./components/Techs/VersionControlTechs";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Techs() {
     const { t } = useTranslation()
+
+    useEffect(() => {
+        document.title = `Guilherme - ${t("pages.techs.title")}`
+    }, [])
 
     function Title({ title }: { title: string }) {
         return (

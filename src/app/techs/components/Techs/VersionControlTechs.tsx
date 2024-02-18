@@ -1,8 +1,6 @@
 import { Tech } from "./Tech"
-import TechImage from "./Tech/TechImage"
-import TechName from "./Tech/TechName"
 
-export default function VersionControlTechs() {
+export function VersionControlTechs() {
     const versionControlsArray = ["git", "github"]
     const versionControlsElement = versionControlsArray.map(i => {
         let name = i
@@ -22,8 +20,8 @@ export default function VersionControlTechs() {
 
         return (
             <Tech.Root key={i} destiny={destiny} >
-                <TechImage imageName={i} />
-                <TechName name={name} className="first-letter:uppercase" />
+                <Tech.Image imageName={i} />
+                <Tech.Name name={name} className="first-letter:uppercase" />
             </Tech.Root>
         )
     })

@@ -1,6 +1,6 @@
 import { Tech } from "./Tech"
 
-export default function FrontEndTechs() {
+export function FrontEndTechs() {
     const techArray = ["html", "css", "javascript", "typescript", "react", "tailwind", "nextjs", "react-router", "recoil"]
     const Techs = techArray.map(i => {
         let name = i

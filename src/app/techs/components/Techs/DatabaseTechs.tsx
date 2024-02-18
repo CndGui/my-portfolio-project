@@ -1,8 +1,6 @@
 import { Tech } from "./Tech"
-import TechImage from "./Tech/TechImage"
-import TechName from "./Tech/TechName"
 
-export default function DatabaseTechs() {
+export function DatabaseTechs() {
     const databasesArray = ["mongodb"]
     const databasesElement = databasesArray.map(i => {
         let name = i
@@ -18,8 +16,8 @@ export default function DatabaseTechs() {
 
         return (
             <Tech.Root key={i} destiny={destiny} >
-                <TechImage imageName={i} />
-                <TechName name={name} className="first-letter:uppercase" />
+                <Tech.Image imageName={i} />
+                <Tech.Name name={name} className="first-letter:uppercase" />
             </Tech.Root>
         )
     })

@@ -1,10 +1,16 @@
 'use client'
 
-import Navbar from "@/components/Navbar";
+import { Navbar } from "@/components/Navbar";
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Project } from "./components/Project";
 
 export default function Projects() {
     const { t } = useTranslation()
+
+    useEffect(() => {
+        document.title = `Guilherme - ${t("pages.projects.title")}`
+      }, [])
 
     return (
         <div>
@@ -17,43 +23,33 @@ export default function Projects() {
                 </div>
 
                 <div className="grid grid-cols-2 max-[1396px]:grid-cols-1 gap-y-6 max-[1396px]:mx-auto">
-                    <div className="border border-black/20 dark:border-white/20 w-96 max-[500px]:w-[18rem] h-[26rem] rounded-md p-6 flex flex-col">
-                        <img src="/images/projects/my-portfolio-projectold.png" alt="My old portfolio" className="rounded-md" />
+                    <Project.Root>
+                        <Project.Image src="my-portfolio-projectold.png" alt="My Old Portfolio"/>
+                        
+                        <Project.MainRoot>
+                            <Project.Title title="My Portfolio (Old)" />
+                            <Project.Description tDescription="pages.projects.project-1" />
+                        </Project.MainRoot>
 
-                        <div className="mt-3">
-                            <strong>My Portfolio (Old)</strong>
-                            <p className="mt-3 text-zinc-600 dark:text-zinc-400">{t("pages.projects.project-1")}</p>
-                        </div>
+                        <Project.ButtonsRoot>
+                            <Project.Button type="visit" link="https://cndgui.github.io/my-portfolio-project-old/" />
+                            <Project.Button type="source" link="https://github.com/CndGui/my-portfolio-project-old" />
+                        </Project.ButtonsRoot>
+                    </Project.Root>
 
-                        <div className="mt-auto flex gap-4">
-                            <a href="https://github.com/CndGui/my-portfolio-project" target="_blank">
-                                <button className="w-20 h-8 bg-cyan-500 dark:bg-cyan-700 rounded-md">{t("pages.projects.button-visit")}</button>
-                            </a>
+                    <Project.Root>
+                        <Project.Image src="snake-game-project.png" alt="Snake Game"/>
+                        
+                        <Project.MainRoot>
+                            <Project.Title title="Snake Game" />
+                            <Project.Description tDescription="pages.projects.project-2" />
+                        </Project.MainRoot>
 
-                            <a href="https://cndgui.github.io/my-portfolio-project/" target="_blank">
-                                <button className="w-20 h-8 border border-black/20 dark:border-white/20 rounded-md">{t("pages.projects.button-source")}</button>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="border border-black/20 dark:border-white/20 w-96 max-[500px]:w-[18rem] h-[26rem] rounded-md p-6 flex flex-col">
-                        <img src="/images/projects/snake-game-project.png" alt="Snake Game Project" className="rounded-md" />
-
-                        <div className="mt-3">
-                            <strong>Snake Game</strong>
-                            <p className="mt-3 text-zinc-600 dark:text-zinc-400">{t("pages.projects.project-2")}</p>
-                        </div>
-
-                        <div className="mt-auto flex gap-4">
-                            <a href="https://github.com/CndGui/snake-game-project" target="_blank">
-                                <button className="w-20 h-8 bg-cyan-500 dark:bg-cyan-700 rounded-md">{t("pages.projects.button-visit")}</button>
-                            </a>
-
-                            <a href="https://cndgui.github.io/snake-game-project/" target="_blank">
-                                <button className="w-20 h-8 border border-black/20 dark:border-white/20 rounded-md">{t("pages.projects.button-source")}</button>
-                            </a>
-                        </div>
-                    </div>
+                        <Project.ButtonsRoot>
+                            <Project.Button type="visit" link="https://cndgui.github.io/snake-game-project/" />
+                            <Project.Button type="source" link="https://github.com/CndGui/snake-game-project" />
+                        </Project.ButtonsRoot>
+                    </Project.Root>
                 </div>
             </main>
         </div>

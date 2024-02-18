@@ -1,8 +1,6 @@
 import { Tech } from "./Tech"
-import TechImage from "./Tech/TechImage"
-import TechName from "./Tech/TechName"
 
-export default function AppTechs() {
+export function AppTechs() {
     const appsArray = ["chrome", "vsc", "terminal", "spotify", "discord"]
     const appsElement = appsArray.map(i => {
         let name = i
@@ -15,8 +13,8 @@ export default function AppTechs() {
 
         return (
             <Tech.Root key={i} >
-                <TechImage imageName={i} />
-                <TechName name={name} className="first-letter:uppercase" />
+                <Tech.Image imageName={i} />
+                <Tech.Name name={name} className="first-letter:uppercase" />
             </Tech.Root>
         )
     })

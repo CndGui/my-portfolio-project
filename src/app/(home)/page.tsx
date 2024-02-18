@@ -1,28 +1,18 @@
 'use client'
 
-import Navbar from "@/components/Navbar"
-import { HTMLAttributes } from "react";
+import { Navbar } from "@/components/Navbar"
+import { HTMLAttributes, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { PiNote } from "react-icons/pi";
 import { twMerge } from "tailwind-merge";
+import { MainTechs } from "./components/MainTechs";
 
 export default function Home() {
   const { t } = useTranslation()
 
-  function Info({ ...rest }: HTMLAttributes<HTMLElement>) {
-    const infoArray = ["React", "Typescript", "Javascript", "NextJS", "NodeJS"]
-    const infoLi = infoArray.map(i =>
-      <li key={i} className="px-2 bg-cyan-400 dark:bg-cyan-500/10 rounded-md">
-        {i}
-      </li>
-    )
-
-    return (
-      <ul className={twMerge("flex flex-wrap gap-2", rest.className)}>
-        {infoLi}
-      </ul>
-    )
-  }
+  useEffect(() => {
+    document.title = `Guilherme - ${t("pages.home.sub-text")}`
+  }, [])
 
   return (
     <div>
@@ -38,7 +28,7 @@ export default function Home() {
             <p className="text-4xl font-semibold">Guilherme Rodrigues</p>
             <p className="text-lg text-zinc-600 dark:text-zinc-400 -mt-1">{t("pages.home.sub-text")}</p>
 
-            <Info className="mt-2" />
+            <MainTechs className="mt-2" />
           </div>
         </div>
 

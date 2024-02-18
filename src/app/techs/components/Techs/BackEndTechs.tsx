@@ -1,8 +1,6 @@
 import { Tech } from "./Tech"
-import TechImage from "./Tech/TechImage"
-import TechName from "./Tech/TechName"
 
-export default function BackEndTechs() {
+export function BackEndTechs() {
     const backEndsArray = ["javascript", "typescript", "nodejs"]
     const backEndsElement = backEndsArray.map(i => {
         let name = i
@@ -28,8 +26,8 @@ export default function BackEndTechs() {
 
         return (
             <Tech.Root key={i} destiny={destiny} >
-                <TechImage imageName={i} />
-                <TechName name={name} className="first-letter:uppercase" />
+                <Tech.Image imageName={i} />
+                <Tech.Name name={name} className="first-letter:uppercase" />
             </Tech.Root>
         )
     })
