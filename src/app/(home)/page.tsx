@@ -6,10 +6,6 @@ import { useTranslation } from "react-i18next";
 import { PiNote } from "react-icons/pi";
 import { MainTechs } from "./components/MainTechs";
 import { Experience } from "./components/Experience";
-import { ExperieceImage } from "./components/Experience/ExperienceImage";
-import { ExperienceTitle } from "./components/Experience/ExperienceTitle";
-import { ExperienceJob } from "./components/Experience/ExperienceJob";
-import { ExperienceDuration } from "./components/Experience/ExperienceDuration";
 
 export default function Home() {
   const { t } = useTranslation()
@@ -60,11 +56,11 @@ export default function Home() {
 
           <div className="relative h-60 grid grid-cols-3 max-[1100px]:grid-cols-2 max-[580px]:grid-cols-1 gap-6 overflow-y-auto scrollbar-thin scrollbar-thumb-cyan-500/25 scrollbar-track-white/10 px-1">
             <Experience.Root>
-              <ExperieceImage src="rede-screen.png" alt={t("pages.home.sections.experiences.experience.0.title")} />
+              <Experience.Image src="rede-screen.png" alt={t("pages.home.sections.experiences.experience.0.title")} />
               <Experience.InfoRoot>
-                <ExperienceTitle title={t("pages.home.sections.experiences.experience.0.title")} />
-                <ExperienceJob job={t("pages.home.sections.experiences.experience.0.job")} />
-                <ExperienceDuration duration="2018 - 2019" />
+                <Experience.Title title={t("pages.home.sections.experiences.experience.0.title")} />
+                <Experience.Job job={t("pages.home.sections.experiences.experience.0.job")} />
+                <Experience.Duration duration="2018 - 2019" />
               </Experience.InfoRoot>
             </Experience.Root>
           </div>
