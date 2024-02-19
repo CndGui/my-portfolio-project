@@ -22,9 +22,23 @@ export function Navbar({ page }: NavbarProps) {
         setConfigNav(!configNav)
     }
 
-    function ChangeLanguage(language: "pt" | "en") {
-        localStorage.setItem('language', language);
-        i18next.changeLanguage(language);
+    function ChangeLanguage(language: "pt" | "en" | "system") {
+        if (language == "system") {
+            const userLanguage = window.navigator.language
+            const tempLanguage = userLanguage.split('-')[0]
+
+            if (tempLanguage == "pt") {
+                i18next.changeLanguage("pt")
+            } else {
+                i18next.changeLanguage("en")
+            }
+
+            localStorage.removeItem('language');
+            i18next.changeLanguage(tempLanguage);
+        } else {
+            localStorage.setItem('language', language);
+            i18next.changeLanguage(language);
+        }
     }
 
     function NavbarOpen() {
@@ -107,6 +121,7 @@ export function Navbar({ page }: NavbarProps) {
                                 <div className="flex flex-col mt-1 items-center">
                                     <span onClick={() => { ChangeLanguage("pt"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.portuguese")}</span>
                                     <span onClick={() => { ChangeLanguage("en"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.english")}</span>
+                                    <span onClick={() => { ChangeLanguage("system"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.system")}</span>
                                 </div>
                             </div>
                         </div>
@@ -159,6 +174,7 @@ export function Navbar({ page }: NavbarProps) {
                                 <div className="flex flex-col gap-2 mt-1 items-center">
                                     <span onClick={() => { ChangeLanguage("pt"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.portuguese")}</span>
                                     <span onClick={() => { ChangeLanguage("en"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.english")}</span>
+                                    <span onClick={() => { ChangeLanguage("system"); ToggleConfigNav() }} className="border border-transparent rounded px-1 cursor-pointer hover:border-cyan-500 dark:hover:border-cyan-500 w-24">{t("navbar.configuration.options.system")}</span>
                                 </div>
                             </div>
                         </div>
