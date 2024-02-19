@@ -18,11 +18,11 @@ export function LayoutProvider({ children, ...props }: ThemeProviderProps) {
     if (storedLanguage) {
       i18next.changeLanguage(storedLanguage);
     } else {
-        if (language == "pt") {
-          i18next.changeLanguage("pt")
-        }else {
-          i18next.changeLanguage("en")
-        }
+      if (language == "pt") {
+        i18next.changeLanguage("pt")
+      } else {
+        i18next.changeLanguage("en")
+      }
     }
 
     document.title = `Guilherme - ${t("pages.home.sub-text")}`

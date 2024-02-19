@@ -11,7 +11,6 @@
                 "me": "Eu",
                 "socials": "Redes Sociais"
             },
-
             "configuration": {
                 "options": {
                     "light": "Claro",
@@ -20,47 +19,43 @@
                     "portuguese": "Português",
                     "english": "Inglês"
                 },
-
                 "options-cut": {
                     "theme": "Tema",
                     "language": "Idioma"
                 }
             }
         },
-
         "pages": {
             "home": {
                 "sub-text": "Desenvolvedor Front-end",
                 "sections": {
                     "about-me": {
                         "title": "Sobre mim",
-                        "content1": "Olá, eu sou Guilherme Rodrigues de Morais, um jovem de 19 anos apaixonado pela arte da programação. Desde que me lembro, sempre fui fascinado pelo mundo da tecnologia e pelo poder transformador do código. Há três anos, mergulhei de cabeça nesse universo desafiador e estimulante, e desde então, tenho estado em uma jornada de aprendizado contínuo e descobertas emocionantes.",
-                        "content2": "Além do meu amor pela tecnologia, sou uma pessoa sociável e extrovertida. Gosto de passar tempo com amigos e família, compartilhando risadas e experiências memoráveis. Acredito que é nesses momentos de convívio que construímos laços verdadeiros e fortalecemos nossa rede de apoio."
+                        "content": {
+                            "0": "Olá, me chamo Guilherme Rodrigues de Morais, um jovem de 19 anos do interior de Goiás apaixonado por programação desde os 15 anos. Inicialmente, comecei criando Bots para o Discord por diversão e, devido à escassez de desenvolvedores no Brasil, logo fui contratado para projetos específicos. Porém, após cerca de um ano, percebi que o trabalho era complicado e pouco lucrativo, então decidi interrompê-lo.",
+                            "1": "Após um período de estagnação, redescobri meu interesse pelo desenvolvimento front-end e comecei a trabalhar em projetos de aprendizado no final de 2023. Agora, estou em busca de oportunidades para reintegrar-me ao campo da programação e realizar meu sonho de trabalhar em uma empresa nessa área."
+                        }
                     },
-
                     "experiences": {
                         "title": "Experiência",
                         "button": "Baixar Curriculo",
-                        "content": "Nenhuma ;/"
+                        "experience": {
+                            "0": "Desenvolver de Software"
+                        }
                     }
                 }
             },
-
             "projects": {
                 "title": "Meus projetos",
                 "sub-text": "Aqui estão alguns dos projetos que criei. Se estiver interessado, veja mais em ",
-
                 "project-1": "Meu primeiro projeto, que não foi feito seguindo um tutorial ou copiando de algum outro lugar. Foi aqui que realmente senti que estava aprendendo.",
                 "project-2": "Um pequeno projeto onde recriei o famoso jogo da cobrinha, onde o objetivo é mover sua cobrinha para coletar pontos e fazê-la crescer.",
-
                 "button-visit": "Visitar",
                 "button-source": "Código"
             },
-
             "techs": {
                 "title": "Ferramentas e Tecnologias",
                 "sub-text": "Explore algumas das tecnologias que utilizo nos meus projetos. Cada uma tem sua função dentro de um projeto, então se sentir curiosidade, clique em uma para ir para o seu website.",
-
                 "sections-cut": {
                     "database": "Banco de dados",
                     "version-control": "Controle de versão"

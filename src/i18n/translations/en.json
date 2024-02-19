@@ -11,7 +11,6 @@
                 "me": "Me",
                 "socials": "Socials"
             },
-
             "configuration": {
                 "options": {
                     "light": "Light",
@@ -20,47 +19,43 @@
                     "portuguese": "Portuguese",
                     "english": "English"
                 },
-
                 "options-cut": {
                     "theme": "Theme",
                     "language": "Language"
                 }
             }
         },
-
         "pages": {
             "home": {
                 "sub-text": "Front-end Developer",
                 "sections": {
                     "about-me": {
                         "title": "About-me",
-                        "content1": "Hello, I am Guilherme Rodrigues de Morais, a 19-year-old young man passionate about the art of programming. As far back as I can remember, I have always been fascinated by the world of technology and the transformative power of code. Three years ago, I immersed myself headlong into this challenging and stimulating universe, and since then, I have been on a journey of continuous learning and exciting discoveries.",
-                        "content2": "In addition to my love for technology, I am a sociable and outgoing person. I enjoy spending time with friends and family, sharing laughs and memorable experiences. I believe that it is in these moments of togetherness that we build true bonds and strengthen our support network."
+                        "content": {
+                            "0": "Hello, my name is Guilherme Rodrigues de Morais, a 19-year-old from the interior of Goiás who has been passionate about programming since I was 15. Initially, I started creating Discord bots for fun, and due to the shortage of developers in Brazil, I was soon hired for specific projects. However, after about a year, I realized the work was complicated and not very profitable, so I decided to stop.",
+                            "1": "After a period of stagnation, I rediscovered my interest in front-end development and started working on learning projects in late 2023. Now, I'm seeking opportunities to reintegrate into the programming field and fulfill my dream of working for a company in this area."
+                        }
                     },
-
                     "experiences": {
                         "title": "Experiência",
                         "button": "Download CV",
-                        "content": "Nenhuma ;/"
+                        "experience": {
+                            "0": "Software Developer"
+                        }
                     }
                 }
             },
-
             "projects": {
                 "title": "My projects",
                 "sub-text": "Here are some of the projects I ve created. If interested, see more at ",
-
                 "project-1": "My first project, which wasn't done by following a tutorial or copying from somewhere else. Here was when I truly felt that I was learning.",
                 "project-2": "A small project where I recreated the famous snake game, where the objective is to move your snake to collect points and make it grow.",
-
                 "button-visit": "Visit",
                 "button-source": "Source"
             },
-
             "techs": {
                 "title": "Tools and Technologies",
                 "sub-text": "Explore some of the technologies I use in my projects. Each one has its function within a project, so if you feel curious, click on one to go to its website.",
-
                 "sections-cut": {
                     "database": "Database",
                     "version-control": "Version Control"

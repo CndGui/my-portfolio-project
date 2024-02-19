@@ -10,7 +10,7 @@ export default function Projects() {
 
     useEffect(() => {
         document.title = `Guilherme - ${t("pages.projects.title")}`
-      }, [])
+    }, [])
 
     return (
         <div>
@@ -24,8 +24,8 @@ export default function Projects() {
 
                 <div className="grid grid-cols-2 max-[1396px]:grid-cols-1 gap-y-6 max-[1396px]:mx-auto">
                     <Project.Root>
-                        <Project.Image src="my-portfolio-projectold.png" alt="My Old Portfolio"/>
-                        
+                        <Project.Image src="my-portfolio-projectold.png" alt="My Old Portfolio" />
+
                         <Project.MainRoot>
                             <Project.Title title="My Portfolio (Old)" />
                             <Project.Description tDescription="pages.projects.project-1" />
@@ -38,8 +38,8 @@ export default function Projects() {
                     </Project.Root>
 
                     <Project.Root>
-                        <Project.Image src="snake-game-project.png" alt="Snake Game"/>
-                        
+                        <Project.Image src="snake-game-project.png" alt="Snake Game" />
+
                         <Project.MainRoot>
                             <Project.Title title="Snake Game" />
                             <Project.Description tDescription="pages.projects.project-2" />
