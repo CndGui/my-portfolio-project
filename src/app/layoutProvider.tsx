@@ -27,5 +27,9 @@ export function LayoutProvider({ children, ...props }: ThemeProviderProps) {
 
     document.title = `Guilherme - ${t("pages.home.sub-text")}`
   }, []);
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+  return (
+    <NextThemesProvider {...props}>
+      {children}
+    </NextThemesProvider>
+  )
 }
