@@ -40,7 +40,10 @@
                         "title": "Experiência",
                         "button": "Download CV",
                         "experience": {
-                            "0": "Software Developer"
+                            "0": {
+                                "title": "Screen Network",
+                                "job": "Software Developer"
+                            }
                         }
                     }
                 }
