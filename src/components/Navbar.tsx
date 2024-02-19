@@ -106,7 +106,7 @@ export function Navbar({ page }: NavbarProps) {
                 {configNav &&
                     <div>
                         <div onClick={ToggleConfigNav} className="absolute top-0 left-0 h-screen w-screen"></div>
-                        <div className="absolute h-60 w-32 border border-black/20 dark:border-white/20 rounded-md bottom-14 left-24 bg-lightPage dark:bg-darkPage p-2">
+                        <div className="absolute w-32 border border-black/20 dark:border-white/20 rounded-md bottom-14 left-24 bg-lightPage dark:bg-darkPage p-2">
                             <div>
                                 <p className="text-xs">{t("navbar.configuration.options-cut.theme")}</p>
                                 <div className="flex flex-col mt-1 items-center">
@@ -159,7 +159,7 @@ export function Navbar({ page }: NavbarProps) {
                 {configNav &&
                     <div>
                         <div onClick={ToggleConfigNav} className="absolute top-0 left-0 h-screen w-screen"></div>
-                        <div className="absolute h-60 w-32 border border-black/20 dark:border-white/20 rounded-md right-16 bg-lightPage dark:bg-darkPage p-2">
+                        <div className="absolute w-32 border border-black/20 dark:border-white/20 rounded-md right-16 bg-lightPage dark:bg-darkPage p-2">
                             <div>
                                 <p className="text-xs">{t("navbar.configuration.options-cut.theme")}</p>
                                 <div className="flex flex-col gap-2 mt-1 items-center">
