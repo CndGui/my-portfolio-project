@@ -39,6 +39,7 @@
                     "experiences": {
                         "title": "Experiência",
                         "button": "Baixar Curriculo",
+                        "curriculum" : "Currículo",
                         "experience": {
                             "0": {
                                 "title": "Rede Screen",

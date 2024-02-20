@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next"
 
 export function LayoutProvider({ children, ...props }: ThemeProviderProps) {
   const { t } = useTranslation()
+  
   useEffect(() => {
     const userLanguage = window.navigator.language
     let language = userLanguage.split('-')[0]

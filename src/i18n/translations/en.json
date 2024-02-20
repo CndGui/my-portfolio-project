@@ -39,6 +39,7 @@
                     "experiences": {
                         "title": "Experiência",
                         "button": "Download CV",
+                        "curriculum" : "Curriculum",
                         "experience": {
                             "0": {
                                 "title": "Screen Network",

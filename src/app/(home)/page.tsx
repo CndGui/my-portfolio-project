@@ -1,11 +1,11 @@
 'use client'
 
-import { Navbar } from "@/components/Navbar"
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { PiNote } from "react-icons/pi";
 import { MainTechs } from "./components/MainTechs";
 import { Experience } from "./components/Experience";
+import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
   const { t } = useTranslation()
@@ -16,6 +16,7 @@ export default function Home() {
 
   return (
     <div>
+
       <Navbar page="home" />
 
       <main className="ml-60 max-[765px]:ml-0 max-[765px]:mt-14 py-20 px-36 max-[1220px]:px-20 max-[917px]:px-10 max-[480px]:px-4 flex flex-col gap-10">
@@ -49,7 +50,7 @@ export default function Home() {
             <PiNote size={25} />
             <p className="text-xl font-semibold">{t("pages.home.sections.experiences.title")}</p>
 
-            <a href="/files/curriculo.pdf" className="ml-auto" download={"Curriculo.pdf"}>
+            <a href="/files/curriculo.pdf" className="ml-auto" download={`${t("pages.home.sections.experiences.curriculum")}.pdf`}>
               <button className="bg-cyan-500 px-2 rounded-md">{t("pages.home.sections.experiences.button")}</button>
             </a>
           </div>

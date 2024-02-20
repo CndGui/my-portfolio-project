@@ -133,7 +133,7 @@ export function Navbar({ page }: NavbarProps) {
 
     function NavbarClose() {
         const [shortNav, setShortNav] = useState(false)
-        function ToogleShotNav() {
+        function ToggleShortNav() {
             setShortNav(!shortNav)
         }
 
@@ -150,7 +150,7 @@ export function Navbar({ page }: NavbarProps) {
                         <p className="text-xs text-zinc-600 dark:text-zinc-400 -mt-1">{t("navbar.sub-text")}</p>
                     </div>
                 </div>
-                <button onClick={ToogleShotNav} className="absolute top-2 right-4 border border-black/20 dark:border-white/20 rounded-md">
+                <button onClick={ToggleShortNav} className="absolute top-2 right-4 border border-black/20 dark:border-white/20 rounded-md">
                     <LuAlignJustify size={35} className="p-1" />
                 </button>
                 <button onClick={ToggleConfigNav} className="absolute top-2 right-16 border border-black/20 dark:border-white/20 rounded-md">

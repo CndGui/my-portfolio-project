@@ -1,11 +1,11 @@
 'use client'
 
 import { Navbar } from "@/components/Navbar";
-import { AppTechs } from "./components/Techs/AppTechs";
-import { BackEndTechs } from "./components/Techs/BackEndTechs";
-import { DatabaseTechs } from "./components/Techs/DatabaseTechs";
-import { FrontEndTechs } from "./components/Techs/FrontEndTechs";
-import { VersionControlTechs } from "./components/Techs/VersionControlTechs";
+import { AppTechs } from "./components/techs/AppTechs";
+import { BackEndTechs } from "./components/techs/BackEndTechs";
+import { DatabaseTechs } from "./components/techs/DatabaseTechs";
+import { FrontEndTechs } from "./components/techs/FrontEndTechs";
+import { VersionControlTechs } from "./components/techs/VersionControlTechs";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
