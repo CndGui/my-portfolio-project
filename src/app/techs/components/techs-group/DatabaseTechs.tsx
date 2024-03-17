@@ -1,7 +1,7 @@
 import { Tech } from "./Tech"
 
 export function DatabaseTechs() {
-    const databasesArray = ["mongodb"]
+    const databasesArray = ["mongodb", "mysql", "postgresql"]
     const databasesElement = databasesArray.map(i => {
         let name = i
         let destiny;
@@ -10,6 +10,18 @@ export function DatabaseTechs() {
             case "mongodb": {
                 destiny = "https://www.mongodb.com/pt-br"
                 name = "mongoDB"
+                break
+            }
+
+            case "mysql": {
+                destiny = "https://mysql.com/"
+                name = "mySQL"
+                break
+            }
+
+            case "postgresql": {
+                destiny = "https://www.postgresql.org/"
+                name = "postgreSQL"
                 break
             }
         }

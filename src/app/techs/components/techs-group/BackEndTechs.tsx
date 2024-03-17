@@ -1,7 +1,7 @@
 import { Tech } from "./Tech"
 
 export function BackEndTechs() {
-    const backEndsArray = ["javascript", "typescript", "nodejs", "java", "spring", "mysql", "postgresql"]
+    const backEndsArray = ["javascript", "typescript", "nodejs", "java", "spring"]
     const backEndsElement = backEndsArray.map(i => {
         let name = i
         let destiny;
@@ -30,18 +30,6 @@ export function BackEndTechs() {
 
             case "spring": {
                 destiny = "https://spring.io/"
-                break
-            }
-
-            case "mysql": {
-                destiny = "https://mysql.com/"
-                name = "mySQL"
-                break
-            }
-
-            case "postgresql": {
-                destiny = "https://www.postgresql.org/"
-                name = "postgreSQL"
                 break
             }
         }
