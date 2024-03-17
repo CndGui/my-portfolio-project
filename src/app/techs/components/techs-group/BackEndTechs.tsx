@@ -1,7 +1,7 @@
 import { Tech } from "./Tech"
 
 export function BackEndTechs() {
-    const backEndsArray = ["javascript", "typescript", "nodejs", "java", "spring"]
+    const backEndsArray = ["javascript", "typescript", "nodejs", "java", "spring", "nestjs", "prisma-orm", "drizzle-orm"]
     const backEndsElement = backEndsArray.map(i => {
         let name = i
         let destiny;
@@ -30,6 +30,24 @@ export function BackEndTechs() {
 
             case "spring": {
                 destiny = "https://spring.io/"
+                break
+            }
+
+            case "nestjs": {
+                destiny = "https://nestjs.com/"
+                name = "nestJS"
+                break
+            }
+
+            case "prisma-orm": {
+                destiny = "https://www.prisma.io/"
+                name = "prismaORM"
+                break
+            }
+
+            case "drizzle-orm": {
+                destiny = "https://orm.drizzle.team/"
+                name = "drizzleORM"
                 break
             }
         }
