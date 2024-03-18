@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   description: "Fullstack developer, striving to demonstrate continuous improvement day by day. This is my portfolio, a project created so that I can share with everyone my experiences, projects, and my skills.",
   openGraph: {
     title: "Guilherme - Front-end developer",
-    description: "Fullstack developer, striving to demonstrate continuous improvement day by day. This is my portfolio, a project created so that I can share with everyone my experiences, projects, and my skills."
+    description: "Fullstack developer, striving to demonstrate continuous improvement day by day. This is my portfolio, a project created so that I can share with everyone my experiences, projects, and my skills.",
+    images: "images/opengraph-image.png"
   }
 };
 
