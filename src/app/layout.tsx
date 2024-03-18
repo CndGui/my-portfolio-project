@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body className="font-poppins bg-lightPage dark:text-white">
+      <body className="font-poppins bg-lightPage dark:bg-darkPage dark:text-white">
         <LayoutProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
         </LayoutProvider>
