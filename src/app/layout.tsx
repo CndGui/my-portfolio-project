@@ -3,9 +3,12 @@ import "./globals.css";
 import { LayoutProvider } from "./layoutProvider";
 
 export const metadata: Metadata = {
-  icons: "/images/perfil.png",
-  title: "",
-  description: "",
+  title: "Guilherme - Front-end developer",
+  description: "Fullstack developer, striving to demonstrate continuous improvement day by day. This is my portfolio, a project created so that I can share with everyone my experiences, projects, and my skills.",
+  openGraph: {
+    title: "Guilherme - Front-end developer",
+    description: "Fullstack developer, striving to demonstrate continuous improvement day by day. This is my portfolio, a project created so that I can share with everyone my experiences, projects, and my skills."
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
